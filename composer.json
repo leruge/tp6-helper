@@ -8,7 +8,7 @@
             "email": "leruge@163.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "topthink/framework": "^6.0.0"
     },
