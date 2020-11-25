@@ -1,0 +1,12 @@
+# 封装一些经常用的函数
+1. check_captcha($phone, $code, $msg = '验证码不正确')
+1. format_time($time, $type = 1)
+1. generate_nickname()
+1. handle_get_pic($pics, $type = 1)
+1. handle_set_pic($pics, $type = 1)
+1. handle_set_content($content)
+1. handle_get_content($content = null)
+1. handle_get_num($num = null)
+1. handle_set_num($num)
+1. generate_room_num($fromId, $toId)
+1. result($data = null, $code, $msg = '操作成功', $url = null)
