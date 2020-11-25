@@ -5,6 +5,7 @@
  * @email lereuge@163.com
  * @qq 305530751
  */
+use think\exception\HttpResponseException;
 
 if (!function_exists('check_captcha')) {
     /**
@@ -17,7 +18,8 @@ if (!function_exists('check_captcha')) {
      */
     function check_captcha($phone, $code, $msg = '验证码不正确')
     {
-        if (!in_array($phone, config('extra.test_account'))) {
+        $testAccountArray = config('extra.test_account') ?: [];
+        if (!in_array($phone, $testAccountArray)) {
             if (cache('code' . $phone) != $code) {
                 result(null, 0, $msg);
             }
@@ -38,6 +40,9 @@ if (!function_exists('format_time')) {
     function format_time($time, $type = 1)
     {
         if (empty($time)) {
+            return null;
+        }
+        if (!is_numeric($time)) {
             return null;
         }
         $formatTime = null;
