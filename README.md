@@ -1,5 +1,6 @@
 # 封装一些经常用的函数
-1. check_captcha($phone, $code, $msg) 验证验证码是否正确，测试账号不验证
+1. check_captcha($phone, $code, $msg) 验证验证码是否正确，测试账号不验证，万能验证码888888
+1. 在extra.php中配置test_account测试账号，数组格式
 
 |参数|含义|
 |---|---|
