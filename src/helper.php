@@ -269,7 +269,7 @@ if (!function_exists('result')) {
      * @return void 响应
      * @throws HttpResponseException
      */
-    function result($data = null, $code, $msg = '操作成功', $url = null)
+    function result($data = null, $code = 1, $msg = '操作成功', $url = null)
     {
         $res = [
             'data' => $data,
