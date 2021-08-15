@@ -62,7 +62,7 @@ if (!function_exists('format_time')) {
                 } elseif ($validTime >= $oneDay && $validTime < $oneDay * 2) {
                     return date('H:i', $time) ? '昨天 ' . date('H:i', $time) : null;
                 } elseif ($validTime >= $oneDay * 2) {
-                    return date('Y-m-d H:i', $time) ?: null;
+                    return date('Y-m-d', $time) ?: null;
                 }
             } else {
                 return null;
